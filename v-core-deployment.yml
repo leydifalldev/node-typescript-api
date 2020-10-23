@@ -1,0 +1,45 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: v-core
+  namespace: v-space
+  labels:
+    app: v-core
+spec:
+  selector:
+    app: v-core
+  type: LoadBalancer
+  ports:
+    - port: 5000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v-core
+  namespace: v-space
+  labels:
+    app: v-core
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: v-core
+  template:
+    metadata:
+      namespace: v-space
+      labels:
+        app: v-core
+    spec:
+      containers:
+      - name: v-core
+        image: leydifall/v-core-arm:0.0.1
+        env:
+        - name: ES_PROTOCOL
+          value: "http"
+        - name: ES_HOST
+          value: "elasticsearch-api-rest"
+        - name: ES_PORT
+          value: "9200"
+        ports:
+        - containerPort: 5000
+---

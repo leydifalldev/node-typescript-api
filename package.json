@@ -1,0 +1,38 @@
+{
+  "name": "v-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-on-rpi": "NODE_ENV=rpicluster nodemon"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.5.0",
+    "apollo-server": "^2.9.15",
+    "apollo-server-express": "^2.9.15",
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.18.1",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "graphql-tools": "^4.0.6",
+    "graphql-upload": "^10.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.3",
+    "mongoose": "^5.9.2",
+    "nodemon": "^2.0.2",
+    "pg": "^8.0.2",
+    "qrcode": "^1.4.4",
+    "redis": "^3.0.2",
+    "rxjs": "^6.6.2",
+    "slugify": "^1.4.0",
+    "uuid": "^3.3.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  }
+}

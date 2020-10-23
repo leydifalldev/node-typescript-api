@@ -1,0 +1,33 @@
+instances:
+  - name: elastic_01
+    dns:
+      - elastic_01 
+      - localhost
+    ip:
+      - 127.0.0.1
+
+  - name: elastic_02
+    dns:
+      - elastic_02
+      - localhost
+    ip:
+      - 127.0.0.1
+
+  - name: elastic_03
+    dns:
+      - elastic_03
+      - localhost
+    ip:
+      - 127.0.0.1
+
+  - name: 'kibana'
+    dns:
+      - kibana
+      - localhost
+
+  - name: v-core
+    dns:
+      - v-core
+      - localhost
+    ip:
+      - 127.0.0.1
